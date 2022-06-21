@@ -1,0 +1,45 @@
+<meta charset = "UTF-8">
+
+<script>
+
+	function pulaLinha () {
+
+		document.write("<br>");
+	}
+
+	function mostra (frase){  // meu código está errado, é preciso identificar o erro como treino.
+
+		document.write();
+		pulaLinha();
+
+	}
+
+	function calculoImc(peso, altura){
+
+		var imc = peso / (altura * altura);
+		return imc;
+	}
+
+	var peso = parseInt(prompt("Digite seu peso: "));
+	var altura = parseInt(prompt("Digite sua altura"));
+
+	if (calculoImc <= 18.5){
+		mostra("Seu IMC é : " + calculoImc + ". <br> Esse IMC está abaixo do peso.");
+	}
+	if (calculoImc <= 24.9){
+		mostra("Seu IMC é : " + calculoImc + ". <br> Esse IMC é considerado peso normal.");
+	}
+	if (calculoImc <= 29.0){
+		mostra("Seu IMC é : " + calculoImc + ". <br> Esse IMC é considerdo sobrepeso.");
+	}
+	if (calculoImc <= 34.9){
+		mostra("Seu IMC é : " + calculoImc + ". <br> Esse IMC é Obesidade Grau I.");
+	}
+	if (calculoImc <= 39.9){
+		mostra("Seu IMC é : " + calculoImc + ". <br> Esse IMC é considerado Obesidade Severa Grau II.");
+	}
+	if(calculoImc >= 40.0){
+		mostra("Seu IMC é : " + calculoImc + ". <br> Esse IMC é considerado Obesidade Mordiba Grau III");
+	}
+	
+	</script>

@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<input />
+<button>Clique Aqui</button>
+
+<script>
+
+	function pulaLinha() {
+    	document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+	function click(){
+
+	
+			if(input.value == botao){
+				alert("Acertou, o número pensado foi " + botao);
+				break;
+			}
+			else{
+				alert("Você errou. São três tentativas.")
+				input.value="";
+			}
+		
+	}
+
+
+	var botao = document.querySelector("button");
+	botao.onclick = click;
+	botao = Math.round(Math.random());
+	
+
+</script>

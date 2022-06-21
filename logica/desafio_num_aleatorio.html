@@ -1,0 +1,32 @@
+<meta charset = "UTF-8">
+
+<script>
+
+  function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+    function sorteia() {
+
+        return numeroPensado = Math.round(Math.random() * 10);
+}
+
+	var chute = parseInt(prompt("Digite entre 0 a 10 e veja se acerta o número que pensei: "))
+	var numeroPensado = sorteia();
+
+	if (chute == numeroPensado){
+		mostra("Parabéns! Você chutou " + chute + " e número sorteado foi " + numeroPensado);
+	}
+	else{
+		mostra("Vesh, errou. Você chutou " + chute + " e o número sorteado foi " + numeroPensado);
+	}
+
+	</script>
