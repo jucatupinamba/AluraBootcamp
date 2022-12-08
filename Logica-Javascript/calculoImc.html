@@ -1,0 +1,56 @@
+<meta charset="UTF=8">
+
+<script>
+
+    function pulaLinha(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra (frase){
+        document.write(frase);
+        pulaLinha;
+    }
+
+    function calculoImc (altura, peso){
+        return peso / (altura * altura);
+    }
+
+    var nome = prompt("Informe seu nome: ");
+    var alturaInformada = parseFloat(prompt(nome + ", informe sua altura: "));
+    var pesoInformado = parseFloat(prompt(nome + ", informe seu peso: * Utilize ponto (ex: 1.82)"));
+
+    var imcResult = calculoImc(alturaInformada, pesoInformado);
+
+    var imc = imcResult.toFixed(2);
+    		    		
+    		if(imc < 20)
+    		{
+    			alert('Seu IMC é '+ imc +' Você esta abaixo do peso!');
+    		} 
+    		else if(imc >20 && imc <= 25)
+    		{
+    			alert('Seu IMC é '+ imc +" Peso Ideal");
+    		}
+    		else if(imc >25 && imc <= 30)
+    		{
+    			alert('Seu IMC é '+ imc +" Sobrepeso");
+    		}
+    		else if(imc >30 && imc <= 35)
+    		{
+    			alert('Seu IMC é '+ imc +" Obesidade Moderada");
+    		}
+    		else if(imc >35 && imc <= 40)
+    		{
+    			alert('Seu IMC é '+ imc +" Obesidade Severa");
+    		}
+    		else if(imc >40 && imc <= 50)
+    		{
+    			alert('Seu IMC é '+ imc +" Obesidade Morbida");
+    		}
+    		else
+    		{
+    			alert('Seu IMC é '+ imc +' Gordo');
+    		}
+    
+</script>
