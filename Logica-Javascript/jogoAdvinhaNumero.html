@@ -1,5 +1,7 @@
 <meta charset="UTF-8">
 <script>
+    
+    var acerto = false;
 
     function pulaLinha() {
 
@@ -15,24 +17,27 @@
     function sorteia(){
         return Math.round(Math.random() * 10)
     }
+    while(tentativas <= 3 || acerto){
+        alert("Pense em um número de 0 a 10");
 
-    alert("Pense em um número de 0 a 10");
+        var numeroPensado = sorteia();
 
-    var numeroPensado = sorteia();
+        var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
 
-    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+        if(chute < numeroPensado) {
 
-    if(chute < numeroPensado) {
+            mostra("Você errou! Eu tinha pensado no " + numeroPensado + " Você chutou baixo");
+        }
+        if(chute > numeroPensado){
 
-        mostra("Você errou! Eu tinha pensado no " + numeroPensado + " Você chutou baixo");
+            mostra("Você errou! Eu tinha pensado no " + numeroPensado + " Você chutou alto");
+        }
+
+        if(chute == numeroPensado) {
+
+            mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+            acerto = true;
+        } 
     }
-    if(chute > numeroPensado){
 
-        mostra("Você errou! Eu tinha pensado no " + numeroPensado + " Você chutou alto");
-    }
-
-    if(chute == numeroPensado) {
-
-        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
-    } 
 </script>
