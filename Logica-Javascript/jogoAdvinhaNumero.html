@@ -1,7 +1,14 @@
+<!DOCTYPE html>
 <meta charset="UTF-8">
+
+<input/>
+    <button>Compare com o meu segredo</button>
+
 <script>
     
     var acerto = false;
+    var tentativa = 1;
+    var numeroPensado = null;
 
     function pulaLinha() {
 
@@ -13,31 +20,45 @@
         document.write(frase);
         pulaLinha();
     }
+    
+    alert("Pense em um número de 0 a 10");
+    var button = document.querySelector("button")
+    numeroPensado = sorteia();
+
+    while(tentativa <= 3 || acerto){
+        
+        button.onclick = verifica;
+        tentativa++;    
+    }
 
     function sorteia(){
         return Math.round(Math.random() * 10)
     }
-    while(tentativas <= 3 || acerto){
-        alert("Pense em um número de 0 a 10");
 
-        var numeroPensado = sorteia();
+    var input = document.querySelector("input");
 
-        var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
-
-        if(chute < numeroPensado) {
-
-            mostra("Você errou! Eu tinha pensado no " + numeroPensado + " Você chutou baixo");
-        }
-        if(chute > numeroPensado){
-
-            mostra("Você errou! Eu tinha pensado no " + numeroPensado + " Você chutou alto");
-        }
-
-        if(chute == numeroPensado) {
+    function verifica(){
+        if(input.value == numeroPensado) {
 
             mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
             acerto = true;
-        } 
+        }
+        else{
+            if(input.value < numeroPensado) {
+
+                alert("Você errou! Eu tinha pensado em um número maior, você chutou baixo");
+                input.value = "";
+                input.focus(); 
+                }
+                else{
+
+                alert("Você errou! Eu tinha pensado em um número menor você chutou alto");
+                input.value = "";
+                input.focus(); 
+                }
+        }
+        input.value = "";
+        input.focus(); 
     }
 
 </script>
