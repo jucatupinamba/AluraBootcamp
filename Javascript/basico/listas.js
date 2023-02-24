@@ -10,3 +10,10 @@ listaDeDestinos.push(`Curutiba`);  //método add elementos
 
 console.log("Destinos possíveis: ");
 console.log(listaDeDestinos);
+
+listaDeDestinos.splice(1, 1);  // remover posição, qtdade itens
+
+console.log("Destinos possíveis: ");
+console.log(listaDeDestinos);
+
+console.log(listaDeDestinos[1]);  //chamar posição específica
