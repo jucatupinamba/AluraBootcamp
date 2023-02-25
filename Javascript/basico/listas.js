@@ -23,11 +23,9 @@ if(idadeComprador >= 18){
     console.log("Comprador maior de idade");
     listaDeDestinos.splice(1, 1);  // remover posição, qtdade itens
 }
-else{
-    if(estaAcompanhado){
+else if(estaAcompanhado){
         console.log(`Comprador está acompanhado`);
     }
     else{
         console.log("Não é maior de idade, não posso vender");
     }
-}
