@@ -1,6 +1,6 @@
-
-
-const criarTarefa = (evento) => {
+(() => {
+    
+    const criarTarefa = (evento) => {
 
     evento.preventDefault();  
     
@@ -42,4 +42,5 @@ const concluirTarefa = (evento) => {
     const tarefaCompleta = botaoConclui.parentElement;
 
     tarefaCompleta.classList.toggle('done')
-}
+}})  
+()  //para executar a função
